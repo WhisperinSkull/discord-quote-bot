@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="public/style.css">
+    <script src="public/profile-client.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acumin+Pro&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    
+    <!-- ID Card -->
+<div class="card">
+    <!-- Header Section: ID CARD and User ID -->
+    <div class="header">
+        <div class="header-content">
+            <div class="username displayname" id="displayName">USERNAME</div>
+            <div class="header-right userid" id="userId">User ID: #123456</div>  
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="main-info">
+            <div class="stat-item">
+                <span class="label totalquotes-title">Total Quotes</span>
+                <span class="value totalquotes" id="totalQuotes">45</span>
+            </div>
+            <div class="stat-item">
+                <span class="label recentquote-title">Most Recent Quote</span>
+                <span class="value recentquote" id="recentQuote">"Quote goes here"</span>
+            </div>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="profile-column">
+            <div class="profile-pic" id="profilePic"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Buttons Container -->
+<div class="buttons-container">
+    <div class="buttons">
+        <button id="statsButton">STATS</button>
+        <button id="quotesButton">QUTOES</button>
+    </div>
+</div>
+
+<!-- Stats Card -->
+<div class="stats-card" id="statsCard">
+    <h3>STATS</h3>
+    <div class="stat-item">
+        <span class="label">First Quote Date</span>
+        <span class="value" id="firstQuoteDate">01/15/2022</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Longest Quote</span>
+        <span class="value" id="longestQuote">"Longest quote goes here"</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Shortest Quote</span>
+        <span class="value" id="shortestQuote">"Shortest quote goes here"</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Most Common Word</span>
+        <span class="value" id="mostCommonWord">Most common word</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Quote Frequency</span>
+        <span class="value" id="quoteFrequency">2 Days/Quote</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Average Words Per Quote</span>
+        <span class="value" id="avgWords">Average words</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Average Characters Per Quote</span>
+        <span class="value" id="avgChars">Average characters</span>
+    </div>
+    <div class="stat-item">
+        <span class="label">Most Quoted Day of the Week</span>
+        <span class="value" id="mostQuotedDay">Day of the week</span>
+    </div>
+</div>
+
+<!-- Quotes Card -->
+<div class="quotes-card" id="quotesCard">
+    <h3>QUOTES</h3>
+    <div id="quotesList">
+        <!-- Quotes will be dynamically inserted here -->
+    </div>
+</div>
+
+   
+
+    <script src="profile-client.js" defer></script>
+    <script>
+        // JavaScript to handle button clicks and card visibility
+        document.getElementById('statsButton').addEventListener('click', () => {
+            const statsCard = document.getElementById('statsCard');
+            const quotesCard = document.getElementById('quotesCard');
+    
+            if (statsCard.style.display === 'block') {
+                statsCard.style.display = 'none'; // Hide stats card if it's already visible
+            } else {
+                statsCard.style.display = 'block'; // Show stats card
+                quotesCard.style.display = 'none'; // Hide quotes card
+            }
+        });
+    
+        document.getElementById('quotesButton').addEventListener('click', () => {
+            const statsCard = document.getElementById('statsCard');
+            const quotesCard = document.getElementById('quotesCard');
+    
+            if (quotesCard.style.display === 'block') {
+                quotesCard.style.display = 'none'; // Hide quotes card if it's already visible
+            } else {
+                quotesCard.style.display = 'block'; // Show quotes card
+                statsCard.style.display = 'none'; // Hide stats card
+            }
+        });
+    
+        // Hide both cards initially
+        document.getElementById('statsCard').style.display = 'none';
+        document.getElementById('quotesCard').style.display = 'none';
+    </script>
+</body>
+</html>

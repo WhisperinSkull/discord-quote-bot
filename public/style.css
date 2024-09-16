@@ -1,0 +1,207 @@
+body {
+    font-family: 'Acumin Pro', sans-serif;
+    background-color: #2c2f33; /* Dark background for the entire page */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #23272a; /* Dark card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all items horizontally */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center align items */
+    width: 100%; /* Ensure it takes full width of the container */
+    max-width: 100%; /* Prevent overflow if the content is too wide */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    margin-bottom: 10px; /* Space between header and username */
+}
+
+.header-right {
+    font-size: 12px; /* Smaller font size for user ID */
+    color: #cecece;
+}
+
+.username {
+    font-size: calc(24px + (3vw)); /* Responsive font size */
+    font-weight: 1000;
+    margin: 0;
+    width: 100%; /* Ensure it takes full width */
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    align-items: stretch; /* Ensure children take the full height of the container */
+    margin-bottom: 20px;
+}
+
+.main-info {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-column {
+    display: flex;
+    align-items: center; /* Center profile picture vertically */
+    margin-left: 60px; /* Spacing between profile and stats column */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #7289da; /* Placeholder color */
+    background-size: cover;
+    background-position: center;
+}
+
+.stat-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.value {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center align the buttons container */
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Same as card width */
+}
+
+button {
+    background-color: #7289da;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    flex: 1; /* Make buttons take equal width within the container */
+    margin: 0 10px; /* Space between buttons */
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #5b6eae;
+    font-weight: bolder;
+}
+
+/* General card styles to match the ID card */
+.card, .stats-card, .quotes-card {
+    background-color: #23272a; /* Dark card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; /* Adjust padding for consistency */
+}
+
+.stats-card, .quotes-card {
+    border: 1px solid #7289da; /* Border to match button color */
+}
+
+/* Stats Card */
+.stats-card {
+    margin-top: 20px;
+    padding: 20px; /* Adjust padding for better spacing */
+}
+
+.stats-card h3 {
+    margin-top: 0;
+    font-size: 22px; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #ffffff; /* White text color for headings */
+}
+
+/* Specific styling for stat items in stats card */
+.stats-card .stat-item {
+    margin-bottom: 20px; /* Decrease space between items for compact look */
+    padding: 10px;
+    border-bottom: 1px solid #555; /* Light border for separation */
+}
+
+.stats-card .stat-item:last-child {
+    border-bottom: none;
+}
+
+.stats-card .label {
+    font-weight: bold;
+    color: #ffffff; /* White text color for labels */
+}
+
+.stats-card .value {
+    display: block;
+    margin-top: 5px;
+    color: #ddd; /* Slightly lighter color for values */
+}
+
+/* Quotes Card */
+.quotes-card {
+    margin-top: 20px;
+    padding: 20px; /* Adjust padding for better spacing */
+}
+
+.quotes-card h3 {
+    margin-top: 0;
+    font-size: 22px; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #ffffff; /* White text color for headings */
+}
+
+/* Specific styling for quote items in quotes card */
+.quotes-card .quote-item {
+    margin-bottom: 20px; /* Increase space between quotes */
+    padding: 15px;
+    border-bottom: 1px solid #202020; /* Light border between quotes */
+}
+
+.quotes-card .quote-item:last-child {
+    border-bottom: none;
+}
+
+.quotes-card .quote-text {
+    font-weight: bold;
+    color: #ffffff; /* White text color for quote text */
+}
+
+.quotes-card .quote-date {
+    font-style: italic;
+    color: #ccc; /* Lighter color for date */
+}
